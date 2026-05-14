@@ -137,7 +137,7 @@ export default function App() {
               className="p-1.5 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-lg cursor-pointer">
               <ChevronLeft size={16} />
             </button>
-            <span className="text-sm font-medium text-slate-700 w-40 text-center capitalize tabular-nums">
+            <span className="text-sm font-medium text-slate-700 w-24 sm:w-40 text-center capitalize tabular-nums">
               {navLabel}
             </span>
             <button onClick={() => view === 'week' ? setWeekStart(w => addWeeks(w, 1)) : setMonthStart(m => addMonths(m, 1))}
@@ -150,9 +150,9 @@ export default function App() {
           <div className="ml-auto flex items-center gap-3">
             <button
               onClick={() => setBookingModal({ start: roundToNext30(new Date()), end: roundToNext30(new Date(), 60) })}
-              className="flex items-center gap-1.5 bg-slate-900 hover:bg-slate-700 text-white text-sm font-medium px-3.5 py-1.5 rounded-lg transition-colors cursor-pointer">
+              className="flex items-center gap-1.5 bg-slate-900 hover:bg-slate-700 text-white text-sm font-medium px-2.5 sm:px-3.5 py-1.5 rounded-lg transition-colors cursor-pointer">
               <Plus size={15} strokeWidth={2.5} />
-              Book bilen
+              <span className="hidden sm:inline">Book bilen</span>
             </button>
             <div className="flex items-center gap-2 pl-3 border-l border-slate-200">
               <span className="text-sm text-slate-600 hidden md:block">{userName}</span>

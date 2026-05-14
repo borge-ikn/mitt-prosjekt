@@ -72,7 +72,8 @@ export default function WeekCalendar({ weekStart, bookings, onSlotClick, onBooki
   }
 
   return (
-    <div className="flex flex-col min-w-0">
+    <div className="flex flex-col min-w-0 overflow-x-auto">
+      <div style={{ minWidth: '480px' }}>
       {/* Day headers */}
       <div className="flex ml-14 border-b border-gray-200">
         {days.map(day => (
@@ -161,6 +162,7 @@ export default function WeekCalendar({ weekStart, bookings, onSlotClick, onBooki
             </div>
           )
         })}
+      </div>
       </div>
     </div>
   )
